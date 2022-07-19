@@ -12,7 +12,7 @@ import builtins from 'rollup-plugin-node-builtins';
 export default {
 	input: ['index.js'],
 	output: {
-		name: 'MapboxMeasureTools',
+		name: 'MapboxglMeasureTools',
 		file: outputFile,
 		format: 'umd',
 		sourcemap: true,

@@ -36,14 +36,9 @@
       bearing: 0
     })
 
-    var ss = null
-
-
-
-  map.on('style.load', () => {
-    ss = new MapboxMeasureTools()
-    map.addControl(ss, 'top-right')
-  })
+    map.on('style.load', () => {
+      map.addControl(new MapboxglMeasureTools(), 'top-right')
+    })
   </script>
 </body>
 

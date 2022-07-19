@@ -3,7 +3,7 @@ import setupOptions from './src/options'
 import setupAPI from './src/api'
 // import * as Constants from './src/constants';
 
-const setupMeasure = function(options, api) {
+const setupMeasureTools = function(options, api) {
   options = setupOptions(options)
 
   const ctx = {
@@ -22,8 +22,8 @@ const setupMeasure = function(options, api) {
   return api
 }
 
-function MapboxMeasureTools(options) {
-  setupMeasure(options, this)
+function MapboxglMeasureTools(options) {
+  setupMeasureTools(options, this)
 }
 
-export default MapboxMeasureTools
+export default MapboxglMeasureTools
