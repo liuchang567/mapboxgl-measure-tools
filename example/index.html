@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css" type="text/css" rel="stylesheet" />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js"type="text/javascript" charset="utf-8"></script>
+  <script src="../dist/mapbox-gl-measure-tools-unminified.js"></script>
+  <link href="../dist/mapbox-gl-measure-tools.css" type="text/css" rel="stylesheet"></link>
+  <style>
+    body,
+    html {
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  
+  <div id='map' style='width: 100%; height:100%'></div>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZmpkeW5hbWljcyIsImEiOiJja3N4ejJ0amEwZGkzMnFycjNnOTRpMXFuIn0.g12wgYZBn400AyxQGF9xQg';
+
+    const map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/satellite-v9',
+      center: [110.56793403302373, 37.60456424808345],
+      zoom: 18,
+      antialias: true,
+      bearing: 0
+    })
+
+    var ss = null
+
+
+
+  map.on('style.load', () => {
+    ss = new MapboxMeasureTools()
+    map.addControl(ss, 'top-right')
+  })
+  </script>
+</body>
+
+</html>
