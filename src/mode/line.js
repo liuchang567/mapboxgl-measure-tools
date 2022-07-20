@@ -97,7 +97,6 @@ LineMode.prototype.addLine = function (coords) {
 }
 
 LineMode.prototype.addMeasureResult = function (coords) {
-  const map = this.ctx.map
   let sources = this.ctx.store.sources
   const data = sources[sources.length - 1]
 
@@ -114,7 +113,7 @@ LineMode.prototype.addMeasureResult = function (coords) {
 
   const marker = new mapboxgl.Marker(option)
     .setLngLat(coords)
-    .addTo(map)
+    .addTo(this.ctx.map)
   data.markers.push(marker)
   data.points.push(coords)
 }
@@ -142,7 +141,7 @@ LineMode.prototype.mousemovePoint = function (coords) {
     option.element = this.ctx.store.tempEleResult
     data.tooltip = new mapboxgl.Marker(option)
       .setLngLat(coords)
-      .addTo(map)
+      .addTo(this.ctx.map)
   }
 }
 

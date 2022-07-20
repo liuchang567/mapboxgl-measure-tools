@@ -16,14 +16,17 @@ export default {
 		file: outputFile,
 		format: 'umd',
 		sourcemap: true,
-		indent: false
+		indent: false,
+    globals: {
+      'mapbox-gl': 'mapboxgl'
+    }
 	},
 	treeshake: true,
 	plugins: [
 		replace({
 			'process.env.NODE_ENV': '\'browser\''
 		}),
-		buble({ transforms: { dangerousForOf: true }, objectAssign: 'Object.assign', exclude: 'node_modules/**' }),
+		buble({ transforms: { dangerousForOf: true }, objectAssign: 'Object.assign'}),
 		minified ? terser() : false,
 		resolve({
 			browser: true,
@@ -34,5 +37,7 @@ export default {
 			ignoreGlobal: true
 		})
 	],
-  external: ['mapboxgl']
+  external: [
+    'mapbox-gl'
+  ]
 };
