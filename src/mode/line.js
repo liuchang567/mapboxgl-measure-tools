@@ -1,5 +1,5 @@
 
-// import mapboxgl from 'mapbox-gl'
+import mapboxgl from 'mapbox-gl'
 import { lineString } from '@turf/helpers'
 import turfLength from '@turf/length'
 import * as Constants from '../constants'

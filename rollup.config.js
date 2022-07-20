@@ -1,6 +1,6 @@
 const { MINIFY } = process.env;
 const minified = MINIFY === 'true';
-const outputFile = minified ? 'dist/mapboxgl-measure-tools.js' : 'dist/mapbox-gl-measure-tools-unminified.js';
+const outputFile = minified ? 'dist/mapboxgl-measure-tools.js' : 'dist/mapboxgl-measure-tools-unminified.js';
 
 import replace from '@rollup/plugin-replace';
 import buble from '@rollup/plugin-buble';

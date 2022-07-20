@@ -1,4 +1,4 @@
-// import mapboxgl from 'mapbox-gl'
+import mapboxgl from 'mapbox-gl'
 import { polygon } from '@turf/helpers'
 import turfArea from '@turf/area'
 import * as Constants from '../constants'
