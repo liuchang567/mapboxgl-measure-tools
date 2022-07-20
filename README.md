@@ -70,5 +70,5 @@ markerAnchor: {
 ```
 
 #### api
-  disable -切换其他功能是调用，停止绘制
+  disable -切换其他功能时调用，停止绘制  
   // todo...
