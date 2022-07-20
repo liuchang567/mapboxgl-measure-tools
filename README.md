@@ -5,7 +5,7 @@
 
 支持连续测量
 
-![enter image description here](https://github.com/liuchang567/mapboxgl-measure-tools/assets/result.jpg?inline=false)
+![enter image description here](https://github.com/liuchang567/mapboxgl-measure-tools/blob/master/assets/result.jpg?inline=false)
 
 #### 模块化安装
 ```
