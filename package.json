@@ -13,7 +13,8 @@
   },
   "scripts": {
     "build": "rollup -c --environment MINIFY:true",
-    "build:test": "rollup -c"
+    "build:test": "rollup -c",
+    "watch": "rollup -c --watch"
   },
   "repository": {
     "type": "git",
@@ -49,5 +50,6 @@
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-builtins": "^2.1.2",
     "rollup-plugin-terser": "^7.0.2"
-  }
+  },
+  "dependencies": {}
 }

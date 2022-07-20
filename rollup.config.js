@@ -23,7 +23,7 @@ export default {
 		replace({
 			'process.env.NODE_ENV': '\'browser\''
 		}),
-		buble({ transforms: { dangerousForOf: true }, objectAssign: 'Object.assign' }),
+		buble({ transforms: { dangerousForOf: true }, objectAssign: 'Object.assign', exclude: 'node_modules/**' }),
 		minified ? terser() : false,
 		resolve({
 			browser: true,
@@ -33,5 +33,6 @@ export default {
 		commonjs({
 			ignoreGlobal: true
 		})
-	]
+	],
+  external: ['mapboxgl']
 };
