@@ -1,7 +1,6 @@
 import LineMode from './mode/line'
 import AreaMode from './mode/area'
 import * as Constants from './constants'
-import { feature } from '@turf/helpers'
 
 export default function Store(ctx) {
   this.ctx = ctx
@@ -77,12 +76,14 @@ export default function Store(ctx) {
 
   this.init = () => {
     this.sources.push(JSON.parse(this.tempData))
-
-    this.LineMode = new LineMode(this.ctx)
-    this.LineMode.init()
-
-    this.AreaMode = new AreaMode(this.ctx)
-    this.AreaMode.init()
+    if (this.ctx.options.controls.line) {
+      this.LineMode = new LineMode(this.ctx)
+      this.LineMode.init()
+    }
+    if (this.ctx.options.controls.area) {
+      this.AreaMode = new AreaMode(this.ctx)
+      this.AreaMode.init()
+    }
   }
 
   this.init()
