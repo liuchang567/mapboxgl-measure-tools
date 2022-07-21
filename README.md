@@ -7,7 +7,9 @@
 
 ![enter image description here](https://github.com/liuchang567/mapboxgl-measure-tools/blob/master/assets/result.jpg?inline=false)
 
-#### 模块化安装
+
+#### 先安装mapboxgl  
+#### 模块化安装  
 ```
   npm install mapboxgl-measure-tool
 ```
