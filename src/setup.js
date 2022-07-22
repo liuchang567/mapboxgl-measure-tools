@@ -6,6 +6,12 @@ export default function (ctx) {
   let controlContainer = null
   const setup = {
     onRemove() {
+      ctx.api.disable()
+      ctx.map = null
+      ctx.events = null
+      ctx.container = null
+      ctx.ui = null
+      ctx.store = null
       if (controlContainer && controlContainer.parentNode) controlContainer.parentNode.removeChild(controlContainer)
       controlContainer = null
       return this
